@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>마음 신호 탐지기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section id="start" class="screen active">
+    <div class="badge">LIFE & CARE</div>
+    <h1>마음 신호<br><span>탐지기</span></h1>
+    <p class="lead">친구의 작은 변화를 알아차리고<br>도움이 되는 대화를 연습해 보세요.</p>
+    <div class="signal">♡</div>
+    <button class="primary" onclick="startGame()">게임 시작 →</button>
+    <p class="notice">※ 진단이나 심리검사가 아닌 교육용 콘텐츠입니다.</p>
+  </section>
+
+  <section id="game" class="screen">
+    <div class="top">
+      <span id="progress">1 / 5</span>
+      <span id="score">점수 0</span>
+    </div>
+    <div class="bar"><div id="bar"></div></div>
+    <div class="question-card">
+      <div class="tag" id="tag">상황</div>
+      <h2 id="question"></h2>
+      <p class="hint">가장 도움이 될 것 같은 행동을 골라보세요.</p>
+      <div id="choices"></div>
+      <div id="feedback" class="feedback"></div>
+    </div>
+    <button id="next" class="next" onclick="nextQuestion()">다음 문제 →</button>
+  </section>
+
+  <section id="result" class="screen">
+    <div class="badge">MISSION COMPLETE</div>
+    <h1>탐지 완료!</h1>
+    <div class="score-circle"><strong id="finalScore">0</strong><small>/ 100</small></div>
+    <h2 id="resultTitle"></h2>
+    <p id="resultText"></p>
+    <div class="tip">
+      <strong>기억해 주세요</strong>
+      <p>친구의 어려움을 혼자 해결하려 하기보다, 믿을 만한 어른이나 전문기관에 도움을 연결하는 것이 중요합니다.</p>
+    </div>
+    <button class="primary" onclick="showScreen('start')">처음으로</button>
+    <p class="notice">긴급한 위험이 있다면 주변의 믿을 만한 어른이나 119·112 등 즉시 도움을 받을 수 있는 곳에 연락하세요.</p>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
